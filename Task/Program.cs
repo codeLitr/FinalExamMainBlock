@@ -7,7 +7,7 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-// Функция для создания массива строк с количеством строк в диапазоне от 1 до 10 и длинной каждой строки в диапазоне от 1 до 5.
+// Метода для создания массива строк с количеством строк в диапазоне от 1 до 10 и длинной каждой строки в диапазоне от 1 до 5.
 // Количество и длина строк создаются при каждом запуске разные в указанных диапазонах.
 string[] CreateRandomString(string[] arraySymbols)
 {
@@ -26,9 +26,15 @@ string[] CreateRandomString(string[] arraySymbols)
     }
     return str;
 }
+// Метод для вывода полученного массива строк в консоль.
+void PrintArray(string[] arrayString)
+{
+    Console.Write("[{0}] -> ", string.Join(", ", arrayString));
+}
 
 string[] arraySymbols =
 { "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у",
 "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 string[] arrayString = CreateRandomString(arraySymbols);
+PrintArray(arrayString);
