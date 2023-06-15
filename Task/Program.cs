@@ -31,6 +31,13 @@ void PrintArray(string[] arrayString)
 {
     Console.Write("[{0}] -> ", string.Join(", ", arrayString));
 }
+// Метод для поиска строк, длина которых меньше или равна 3 символам с последующим выводом в консоль результата.
+// При не выполнении условий будут выведены пустые скобки "[]" (как это указано в примере).
+void FindThreeDigitString(string[] arrayString)
+{
+    string[] threeDigitStrings = arrayString.Where(s => s.Length <= 3).ToArray();
+    Console.Write("[{0}]", string.Join(", ", threeDigitStrings));
+}
 
 string[] arraySymbols =
 { "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у",
@@ -38,3 +45,5 @@ string[] arraySymbols =
 
 string[] arrayString = CreateRandomString(arraySymbols);
 PrintArray(arrayString);
+
+FindThreeDigitString(arrayString);
